@@ -1,1 +1,368 @@
-# IGCSE-Pathway
+# IGCSE-Pathway[My_IGCSE_Pathway_Route_Map.html](https://github.com/user-attachments/files/32035723/My_IGCSE_Pathway_Route_Map.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My IGCSE Pathway Route Map</title>
+<style>
+  :root{
+    --navy:#0B2545; --navy2:#13315C; --teal:#1C7293; --teal-l:#E4F0F3;
+    --orange:#FF6B35; --mint:#02C39A; --gray:#5A7184; --line:#D9E2E8;
+    --text:#1B2733; --bg:#F5F8FA;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:28px 20px 60px;}
+  .topbar{margin-bottom:18px;}
+  .brand{font-size:13px; font-weight:700; letter-spacing:2px; color:var(--orange); text-align:center; margin-bottom:14px;}
+  .progress-track{height:8px; background:var(--line); border-radius:8px; overflow:hidden;}
+  .progress-fill{height:100%; width:0%; background:var(--teal); border-radius:8px; transition:width .35s ease;}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:34px 30px; margin-top:18px; min-height:320px;
+  }
+  h1{font-family:Georgia,'Times New Roman',serif; color:var(--navy); font-size:30px; margin:0 0 10px;}
+  h2{font-family:Georgia,'Times New Roman',serif; color:var(--navy); font-size:23px; margin:0 0 14px;}
+  h3{font-family:Georgia,'Times New Roman',serif; color:var(--navy); font-size:18px; margin:0 0 8px;}
+  p{margin:0 0 14px; font-size:15.5px;}
+  .muted{color:var(--gray);}
+  .eyebrow{font-size:12px; font-weight:700; letter-spacing:1.5px; color:var(--teal); text-transform:uppercase; margin-bottom:8px;}
+  .q-count{font-size:12px; color:var(--gray); margin-bottom:4px;}
+  .q-text{font-family:Georgia,'Times New Roman',serif; font-size:24px; color:var(--navy); margin:6px 0 26px; line-height:1.35;}
+  .btnrow{display:flex; gap:14px; flex-wrap:wrap;}
+  button{font-family:inherit; cursor:pointer;}
+  .btn{
+    border-radius:10px; border:2px solid var(--navy); background:var(--navy); color:#fff;
+    font-size:16px; font-weight:700; padding:16px 20px; flex:1; min-width:130px;
+  }
+  .btn:hover{opacity:.92;}
+  .btn.alt{background:#fff; color:var(--navy); border-color:var(--line);}
+  .btn.alt:hover{border-color:var(--navy);}
+  .btn.orange{background:var(--orange); border-color:var(--orange);}
+  .btn.big{width:100%; padding:18px 20px; font-size:17px;}
+  .btn.small{padding:10px 16px; font-size:13px; flex:none;}
+  .backlink{
+    background:none; border:none; color:var(--gray); font-size:13px; font-weight:600;
+    padding:0; margin-bottom:18px; display:inline-flex; align-items:center; gap:4px;
+  }
+  .backlink:hover{color:var(--teal);}
+  .backlink[disabled]{visibility:hidden;}
+  .hero{text-align:center; padding:6px 0 4px;}
+  .hero .kicker{font-size:13px; font-weight:700; letter-spacing:2px; color:var(--orange); margin-bottom:10px;}
+  .hero h1{font-size:30px;}
+  .hero p{font-size:16px; max-width:520px; margin:0 auto 26px;}
+  .dots{display:flex; justify-content:center; gap:8px; margin:22px 0 26px;}
+  .dots span{width:8px; height:8px; border-radius:50%; background:var(--teal);}
+  .callout{background:var(--teal-l); border-radius:10px; padding:16px 18px; font-size:14.5px; color:var(--navy2); margin:10px 0 20px;}
+  .callout.orange{background:#FFF1EA; color:#8A3A15;}
+  .route-card{border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-bottom:14px; position:relative;}
+  .route-card.top{border:2px solid var(--teal); background:var(--teal-l);}
+  .route-badge{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.5px; color:#075447; background:#CFEFE4; padding:3px 10px; border-radius:20px; margin-bottom:8px;}
+  .route-flow{font-size:12.5px; color:var(--gray); margin-bottom:10px; font-weight:600;}
+  .route-list{margin:0; padding-left:18px; font-size:13.5px; color:var(--text);}
+  .route-list li{margin-bottom:4px;}
+  .rank{display:inline-block; width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-size:13px; font-weight:700; text-align:center; line-height:26px; margin-right:8px;}
+  .field-row{margin-bottom:20px;}
+  label{display:block; font-size:13.5px; font-weight:700; color:var(--navy2); margin-bottom:6px;}
+  select, textarea, input[type=text]{
+    width:100%; border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+    font-size:14.5px; font-family:inherit; color:var(--text); background:#fcfdfe;
+  }
+  textarea{min-height:70px; resize:vertical;}
+  .check-item{display:flex; align-items:flex-start; gap:10px; padding:8px 0; font-size:14.5px; border-bottom:1px solid var(--line); cursor:pointer;}
+  .check-item:last-child{border-bottom:none;}
+  .check-item input{margin-top:3px; width:16px; height:16px; accent-color:var(--teal); flex-shrink:0;}
+  .check-item span.done{text-decoration:line-through; color:var(--gray);}
+  .final-quote{background:var(--navy); color:#fff; border-radius:12px; padding:22px 24px; text-align:center; margin-top:22px;}
+  .final-quote p{color:#DCEAF0; font-size:14.5px; font-style:italic; margin:0;}
+  .foot{text-align:center; font-size:12px; color:var(--gray); margin-top:22px;}
+  @media (max-width:480px){
+    .card{padding:24px 18px;}
+    .q-text{font-size:20px;}
+    .btnrow{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">MY IGCSE PATHWAY ROUTE MAP</div>
+    <div class="progress-track" id="progressTrack" style="display:none;">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+  <main class="card" id="app"></main>
+  <div class="foot">A guidance tool, not a test &mdash; there are no right or wrong answers.</div>
+</div>
+
+<script>
+var ROUTES = {
+  F: { name:"Foundation", flow:"IGCSE \u2192 Foundation \u2192 Bachelor's Degree \u2192 Career",
+    bestFor:["Already know their preferred field","Have a relatively clear university or degree direction","Prefer a shorter, focused pre-university route","Are comfortable with a more specialised pathway"]},
+  A: { name:"A-Levels", flow:"IGCSE \u2192 A-Levels \u2192 Bachelor's Degree \u2192 Career",
+    bestFor:["Prefer academic learning","Want broader university options","May consider studying overseas","Are comfortable with examination-based learning","Have not completely decided on one university"]},
+  D: { name:"Diploma", flow:"IGCSE \u2192 Diploma \u2192 Bachelor's Degree / Work \u2192 Career",
+    bestFor:["Prefer practical and applied learning","Want to study a specific field earlier","Prefer projects and coursework alongside exams","May want the option to work after the diploma","May later progress to a bachelor's degree"]},
+  S: { name:"STPM", flow:"IGCSE \u2192 STPM \u2192 Bachelor's Degree \u2192 Career",
+    bestFor:["Prefer an academic pathway","Want a widely recognised pre-university qualification","Want to keep university options relatively broad","Are comfortable with a demanding academic programme","Want to consider public university options"]},
+  T: { name:"TVET / Skills Pathway", flow:"IGCSE \u2192 TVET / Skills Qualification \u2192 Employment, Diploma or Further Study \u2192 Career",
+    bestFor:["Prefer hands-on learning","Enjoy practical, real-world work","Want to develop technical or vocational skills","Prefer learning by doing rather than mainly theory","Are interested in technical or skills-based careers"]}
+};
+var ROUTE_ORDER = ["F","A","D","S","T"];
+
+var Q = {
+  q_1_1:{section:1, text:"Do you already have a clear idea of the field or course you want to study?",
+    yes:{next:"q_2_1", add:{F:1}}, no:{next:"q_1_2", add:{}}},
+  q_1_2:{section:1, text:"Would you like a pathway that gives you more time to explore your interests before choosing a degree?",
+    yes:{next:"q_3_1", add:{A:2,S:2}}, no:{next:"q_3_1", add:{D:1,T:1}}},
+
+  q_2_1:{section:2, text:"Do you want a pathway that connects directly and quickly to your chosen degree or university?",
+    yes:{next:"q_2_2", add:{F:1}}, no:{next:"q_2_3", add:{}}},
+  q_2_2:{section:2, text:"Are you comfortable committing to a specific university or field quite early?",
+    yes:{next:"q_3_1", add:{F:2}}, no:{next:"q_3_1", add:{A:1,S:1}}},
+  q_2_3:{section:2, text:"Would you prefer to study a specific field and gain practical knowledge before progressing to a degree?",
+    yes:{next:"q_3_1", add:{D:2}}, no:{next:"q_3_1", add:{A:1,S:1}}},
+
+  q_3_1:{section:3, text:"Do you enjoy academic subjects \u2014 theory, reading, writing and exams?",
+    yes:{next:"q_3_2", add:{}}, no:{next:"q_4_1", add:{D:1,T:1}}},
+  q_3_2:{section:3, text:"Are you comfortable with a highly academic, exam-based pathway?",
+    yes:{next:"q_4_1", add:{A:2,S:2}}, no:{next:"q_4_1", add:{F:1,D:1}}},
+  q_4_1:{section:3, text:"Do you prefer practical learning \u2014 projects, hands-on activities and job-related skills?",
+    yes:{next:"q_5_1", add:{D:2,T:2}}, no:{next:"q_5_1", add:{}}},
+
+  q_5_1:{section:4, text:"Is your goal to continue straight to a bachelor's degree?",
+    yes:{next:"q_5_2", add:{F:1,A:1,S:1}}, no:{next:"q_5_3", add:{}}},
+  q_5_2:{section:4, text:"Do you want to enter university as soon as possible after your pre-university studies?",
+    yes:{next:"q_6_1", add:{F:2}}, no:{next:"q_6_1", add:{D:1}}},
+  q_5_3:{section:4, text:"Would you prefer to develop employable skills and enter the workforce earlier?",
+    yes:{next:"q_6_1", add:{T:2,D:1}}, no:{next:"q_6_1", add:{}}},
+
+  q_6_1:{section:5, text:"Are you considering studying overseas?",
+    yes:{next:"q_6_2", add:{}}, no:{next:"q_7_1", add:{S:1,F:1}}},
+  q_6_2:{section:5, text:"Do you want a qualification that gives you broad international university options?",
+    yes:{next:"q_7_1", add:{A:2}}, no:{next:"q_7_1", add:{F:1}}},
+
+  q_7_1:{section:6, text:"Is keeping your education cost lower an important factor for you?",
+    yes:{next:"q_8_1", add:{S:2,D:1,T:1}}, no:{next:"q_8_1", add:{}}},
+
+  q_8_1:{section:7, text:"Are your IGCSE results strong enough for the entry requirements of your preferred pathway?",
+    yes:{next:"q_9_1", add:{}}, no:{next:"q_8_2", add:{}}},
+  q_8_2:{section:7, text:"Are you willing to consider another pathway, or improve your qualifications before progressing?",
+    yes:{next:"q_9_1", add:{D:1,T:1}}, no:{next:"q_9_1", add:{}}},
+
+  q_9_1:{section:8, text:"Do you already have a specific career goal in mind?",
+    yes:{next:"q_9_2", add:{}}, no:{next:"q_9_3", add:{}}},
+  q_9_2:{section:8, text:"Does your chosen career need a specific degree, professional qualification, licence or accreditation? (e.g. medicine, law, engineering)",
+    yes:{next:"RESULT", add:{A:2,S:1,F:1}}, no:{next:"RESULT", add:{D:1,T:1}}},
+  q_9_3:{section:8, text:"Would it help to explore your interests and personality a little more before deciding?",
+    yes:{next:"RESULT", add:{}, tip:true}, no:{next:"RESULT", add:{}}}
+};
+var SECTION_LABELS = {1:"What do you want to study?",2:"Speed vs. exploration",3:"Academic or practical?",
+  4:"Your university goal",5:"Malaysia or overseas?",6:"Budget",7:"Your IGCSE results",8:"Your career goal"};
+
+var CHECK_ITEMS = ["Entry requirements","IGCSE subject requirements","Course fees","Scholarship / financial aid",
+  "University recognition","Duration","Location","Learning style","Career opportunities","Professional accreditation (if applicable)"];
+
+var state = {
+  screen:"intro",       // intro | question | results | top3 | reflect
+  currentId:"q_1_1",
+  scores:{F:0,A:0,D:0,S:0,T:0},
+  history:[],           // {nodeId, scoresSnapshot}
+  showedTip:false,
+  ranked:[]
+};
+
+function cloneScores(s){ return {F:s.F,A:s.A,D:s.D,S:s.S,T:s.T}; }
+
+function answer(val){
+  var node = Q[state.currentId];
+  var branch = node[val];
+  state.history.push({nodeId:state.currentId, scoresSnapshot:cloneScores(state.scores)});
+  for (var k in branch.add){ state.scores[k] += branch.add[k]; }
+  if (branch.tip) { state.showedTip = true; }
+  if (branch.next === "RESULT"){
+    computeRanking();
+    state.screen = "results";
+  } else {
+    state.currentId = branch.next;
+  }
+  render();
+}
+
+function goBack(){
+  if (state.history.length === 0) return;
+  var last = state.history.pop();
+  state.scores = last.scoresSnapshot;
+  state.currentId = last.nodeId;
+  state.screen = "question";
+  render();
+}
+
+function computeRanking(){
+  var arr = ROUTE_ORDER.map(function(k){ return {key:k, score:state.scores[k]}; });
+  arr.sort(function(a,b){
+    if (b.score !== a.score) return b.score - a.score;
+    return ROUTE_ORDER.indexOf(a.key) - ROUTE_ORDER.indexOf(b.key);
+  });
+  state.ranked = arr.map(function(x){ return x.key; });
+}
+
+function restart(){
+  state.screen = "intro";
+  state.currentId = "q_1_1";
+  state.scores = {F:0,A:0,D:0,S:0,T:0};
+  state.history = [];
+  state.showedTip = false;
+  state.ranked = [];
+  render();
+}
+
+function esc(s){
+  var d = document.createElement("div");
+  d.innerText = s;
+  return d.innerHTML;
+}
+
+function updateProgress(){
+  var track = document.getElementById("progressTrack");
+  var fill = document.getElementById("progressFill");
+  if (state.screen === "question"){
+    track.style.display = "block";
+    var section = Q[state.currentId].section;
+    var pct = Math.round(((section - 1) / 8) * 100) + 6;
+    fill.style.width = Math.min(pct,100) + "%";
+  } else {
+    track.style.display = "none";
+  }
+}
+
+function render(){
+  var app = document.getElementById("app");
+  updateProgress();
+
+  if (state.screen === "intro"){
+    app.innerHTML =
+      '<div class="hero">' +
+        '<div class="kicker">START</div>' +
+        '<h1>What do I want to do after IGCSE?</h1>' +
+        '<p>Answer a short series of YES / NO questions about your goals, interests and circumstances. There is no single "correct" pathway &mdash; this tool simply helps you see which routes are worth exploring further.</p>' +
+        '<div class="dots"><span></span><span></span><span></span></div>' +
+        '<button class="btn orange big" onclick="beginQuiz()">Let\'s begin \u2192</button>' +
+      '</div>';
+    return;
+  }
+
+  if (state.screen === "question"){
+    var node = Q[state.currentId];
+    var canBack = state.history.length > 0;
+    app.innerHTML =
+      '<button class="backlink" ' + (canBack?'':'disabled') + ' onclick="goBack()">\u2190 Back</button>' +
+      '<div class="eyebrow">Section ' + node.section + ' of 8 &middot; ' + esc(SECTION_LABELS[node.section]) + '</div>' +
+      '<div class="q-text">' + esc(node.text) + '</div>' +
+      '<div class="btnrow">' +
+        '<button class="btn" onclick="answer(\'yes\')">YES</button>' +
+        '<button class="btn alt" onclick="answer(\'no\')">NO</button>' +
+      '</div>';
+    return;
+  }
+
+  if (state.screen === "results"){
+    var html = '<div class="eyebrow">Your results</div>' +
+      '<h2>Pathways worth exploring</h2>' +
+      '<p class="muted">Based on your answers &mdash; ranked from closest match to your answers. All five are real, valid options; explore any that interest you.</p>';
+    if (state.showedTip){
+      html += '<div class="callout orange">Tip: since you are still exploring your interests, a RIASEC career interest test (in your guidance booklet) can help narrow things down further.</div>';
+    }
+    state.ranked.forEach(function(key, i){
+      var r = ROUTES[key];
+      var cls = i === 0 ? "route-card top" : "route-card";
+      html += '<div class="' + cls + '">' +
+        (i===0 ? '<div class="route-badge">Closest match to your answers</div><br/>' : '') +
+        '<h3><span class="rank">' + (i+1) + '</span>' + esc(r.name) + '</h3>' +
+        '<div class="route-flow">' + r.flow + '</div>' +
+        '<div class="muted" style="font-size:12.5px; font-weight:700; margin-bottom:6px;">BEST FOR STUDENTS WHO:</div>' +
+        '<ul class="route-list">' + r.bestFor.map(function(b){ return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' +
+      '</div>';
+    });
+    html += '<div class="callout"><strong>Does one of these feel like it matches YOU?</strong><br/>Take your time \u2014 you can always come back and try again.</div>' +
+      '<div class="btnrow">' +
+        '<button class="btn" onclick="goToTop3()">Yes, I found one \u2b50</button>' +
+        '<button class="btn alt" onclick="restart()">Not sure &mdash; retake it \uD83D\uDD04</button>' +
+      '</div>';
+    app.innerHTML = html;
+    return;
+  }
+
+  if (state.screen === "top3"){
+    var opts = state.ranked.map(function(k){ return '<option value="' + k + '">' + ROUTES[k].name + '</option>'; }).join('');
+    app.innerHTML =
+      '<div class="eyebrow">My top 3 pathways</div>' +
+      '<h2>Rank your choices</h2>' +
+      '<p class="muted">These are pre-filled from your answers &mdash; change any of them if you\'d prefer a different order.</p>' +
+      '<div class="field-row"><label>\uD83E\uDD47 First choice</label><select id="pick1">' + opts + '</select></div>' +
+      '<div class="field-row"><label>\uD83E\uDD48 Second choice</label><select id="pick2">' + opts + '</select></div>' +
+      '<div class="field-row"><label>\uD83E\uDD49 Backup choice</label><select id="pick3">' + opts + '</select></div>' +
+      '<div class="field-row"><label>Why did I choose these pathways?</label><textarea id="whyText" placeholder="Write a few thoughts for yourself here..."></textarea></div>' +
+      '<button class="btn orange big" onclick="goToChecklist()">Continue \u2192</button>';
+    setTimeout(function(){
+      document.getElementById("pick1").value = state.ranked[0];
+      document.getElementById("pick2").value = state.ranked[1];
+      document.getElementById("pick3").value = state.ranked[2];
+    },0);
+    return;
+  }
+
+  if (state.screen === "checklist"){
+    var items = CHECK_ITEMS.map(function(t,i){
+      return '<label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span>' + esc(t) + '</span></label>';
+    }).join('');
+    app.innerHTML =
+      '<div class="eyebrow">Before you decide</div>' +
+      '<h2>What should I check?</h2>' +
+      '<p class="muted">Tick these off as you research your top choices. Requirements, fees and scholarships vary by institution and programme &mdash; always confirm directly with the university or college.</p>' +
+      '<div>' + items + '</div>' +
+      '<button class="btn orange big" style="margin-top:22px;" onclick="goToReflect()">Continue \u2192</button>';
+    return;
+  }
+
+  if (state.screen === "reflect"){
+    app.innerHTML =
+      '<div class="eyebrow">Final reflection</div>' +
+      '<h2>After IGCSE, I don\'t need to have my whole life figured out.</h2>' +
+      '<div class="field-row"><label>My next step is\u2026</label><textarea id="nextStep" placeholder="e.g. Talk to my counsellor about A-Levels vs STPM"></textarea></div>' +
+      '<button class="btn orange big" onclick="finish()">Complete</button>' +
+      '<div class="final-quote"><p>There is no single "best" pathway after IGCSE. The best pathway is the one that matches your goals, strengths, learning style, circumstances and future plans.</p></div>';
+    return;
+  }
+
+  if (state.screen === "done"){
+    app.innerHTML =
+      '<div class="hero">' +
+        '<div class="kicker">WELL DONE</div>' +
+        '<h1>You\'ve taken a great first step.</h1>' +
+        '<p>Keep exploring, keep asking questions, and remember &mdash; you\'re allowed to change your mind as you learn more.</p>' +
+        '<button class="btn alt big" onclick="restart()">Start over \uD83D\uDD04</button>' +
+      '</div>';
+    return;
+  }
+}
+
+function beginQuiz(){ state.screen = "question"; render(); }
+function goToTop3(){ state.screen = "top3"; render(); }
+function goToChecklist(){ state.screen = "checklist"; render(); }
+function goToReflect(){ state.screen = "reflect"; render(); }
+function finish(){ state.screen = "done"; render(); }
+function toggleCheck(el){
+  var span = el.parentNode.querySelector("span");
+  if (el.checked) span.classList.add("done"); else span.classList.remove("done");
+}
+
+render();
+</script>
+</body>
+</html>
